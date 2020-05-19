@@ -2,16 +2,12 @@
 # share prints two fer
 share() {
   name="you"
-  if [ $# -ne 0 ]; then
+  if [[ $# -ne 0 ]]; then
       name=$1
   fi
   echo "One for $name, one for me."
 }
 
-main () {
- share "$@"
-}
-
 # call main with all of the positional arguments
-main "$@"
+share "$@"
 
